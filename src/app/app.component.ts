@@ -9,10 +9,9 @@ import { AuthService } from "./auth/auth.service";
   standalone: true,
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.css",
-  imports: [AuthComponent, LearningResourcesComponent, NgIf],
+  imports: [AuthComponent, LearningResourcesComponent],
 })
 export class AppComponent {
-  private authService = inject(AuthService);
-
-  isAdmin = computed(() => this.authService.activePermission() === "admin");
+  // private authService = inject(AuthService);
+  // isAdmin = computed(() => this.authService.activePermission() === "admin");
 }
